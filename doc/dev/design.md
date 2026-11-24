@@ -36,4 +36,4 @@ API 仅绑定 127.0.0.1，所有接口验证本机随机令牌，拒绝带 Origi
 
 ## 版本管理
 
-2026-11-24：按用户要求在 `pad-hotkey/` 初始化独立 Git 仓库，初始分支为 `main`，尚未创建首次提交或配置远程。`.gitignore` 排除本机 SDK 与运行数据、实验、外部仓库、.NET 构建产物、测试缓存、IDE 用户状态和令牌。通过 `git check-ignore` 核验；源码、文档、示例配置及 `skill/pad-hotkey/SKILL.md` 保留在可提交范围内。
+2026-11-24：按用户要求在 `pad-hotkey/` 初始化独立 Git 仓库，分支为 `main`。首次提交 `4ffb49e` 已推送至公开仓库 https://github.com/jglwiz/pad-hotkey ，远程名为 `origin`；提交使用 GitHub noreply 邮箱。项目许可证尚未确定，未发布二进制 Release。`.gitignore` 排除本机 SDK 与运行数据、实验、外部仓库、.NET 构建产物、测试缓存、IDE 用户状态和令牌。通过 `git check-ignore` 核验；源码、文档、示例配置及 `skill/pad-hotkey/SKILL.md` 保留在可提交范围内。
