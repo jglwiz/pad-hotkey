@@ -1,0 +1,156 @@
+﻿{
+  "version": 1,
+  "name": "vibe",
+  "bindings": [
+    {
+      "id": "a",
+      "input": "A",
+      "mode": "tap",
+      "keys": [
+        "Enter"
+      ],
+      "threshold": 0.9,
+      "releaseThreshold": 0.7,
+      "processes": [
+        "T3 Code (Beta)",
+        "T3 Code"
+      ]
+    },
+    {
+      "id": "b",
+      "input": "B",
+      "mode": "hold",
+      "keys": [
+        "RightAlt"
+      ],
+      "threshold": 0.9,
+      "releaseThreshold": 0.7,
+      "processes": []
+    },
+    {
+      "id": "x",
+      "input": "X",
+      "mode": "tap",
+      "keys": [
+        "Tab"
+      ],
+      "threshold": 0.9,
+      "releaseThreshold": 0.7,
+      "processes": [
+        "T3 Code (Beta)",
+        "T3 Code"
+      ]
+    },
+    {
+      "id": "y",
+      "input": "Y",
+      "mode": "tap",
+      "keys": [
+        "LeftCtrl",
+        "Z"
+      ],
+      "threshold": 0.9,
+      "releaseThreshold": 0.7,
+      "processes": [
+        "T3 Code (Beta)",
+        "T3 Code"
+      ]
+    },
+    {
+      "id": "previous-chat",
+      "input": "RS.Right",
+      "mode": "tap",
+      "keys": [
+        "LeftCtrl",
+        "LeftShift",
+        "BracketLeft"
+      ],
+      "threshold": 0.9,
+      "releaseThreshold": 0.7,
+      "processes": [
+        "T3 Code (Beta)",
+        "T3 Code"
+      ]
+    },
+    {
+      "id": "next-chat",
+      "input": "RS.Left",
+      "mode": "tap",
+      "keys": [
+        "LeftCtrl",
+        "LeftShift",
+        "BracketRight"
+      ],
+      "threshold": 0.9,
+      "releaseThreshold": 0.7,
+      "processes": [
+        "T3 Code (Beta)",
+        "T3 Code"
+      ]
+    },
+    {
+      "id": "effort-down",
+      "input": "RS.Down",
+      "mode": "tap",
+      "keys": [
+        "LeftCtrl",
+        "LeftShift",
+        "ArrowDown"
+      ],
+      "threshold": 0.6,
+      "releaseThreshold": 0.4,
+      "processes": [
+        "T3 Code (Beta)",
+        "T3 Code"
+      ]
+    },
+    {
+      "id": "effort-up",
+      "input": "RS.Up",
+      "mode": "tap",
+      "keys": [
+        "LeftCtrl",
+        "LeftShift",
+        "ArrowUp"
+      ],
+      "threshold": 0.6,
+      "releaseThreshold": 0.4,
+      "processes": [
+        "T3 Code (Beta)",
+        "T3 Code"
+      ]
+    },
+    {
+      "id": "lt",
+      "input": "LT",
+      "mode": "tap",
+      "keys": [
+        "LeftCtrl",
+        "LeftShift",
+        "BracketLeft"
+      ],
+      "threshold": 0.9,
+      "releaseThreshold": 0.7,
+      "processes": [
+        "T3 Code (Beta)",
+        "T3 Code"
+      ]
+    },
+    {
+      "id": "rt",
+      "input": "RT",
+      "mode": "tap",
+      "keys": [
+        "LeftCtrl",
+        "LeftShift",
+        "BracketRight"
+      ],
+      "threshold": 0.9,
+      "releaseThreshold": 0.7,
+      "processes": [
+        "T3 Code (Beta)",
+        "T3 Code"
+      ]
+    }
+  ]
+}

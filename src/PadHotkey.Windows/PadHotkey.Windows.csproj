@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <HidMaestroSdkPath Condition="'$(HidMaestroSdkPath)' == ''">$(MSBuildThisFileDirectory)..\..\local\sdk\HIDMaestro.Core.dll</HidMaestroSdkPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PadHotkey.Core\PadHotkey.Core.csproj" />
+    <Reference Include="HIDMaestro.Core">
+      <HintPath>$(HidMaestroSdkPath)</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CheckHidMaestroSdk" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(HidMaestroSdkPath)')" Text="HIDMaestro.Core.dll not found. Provision local/sdk or pass -p:HidMaestroSdkPath=FULL_PATH." />
+  </Target>
+</Project>

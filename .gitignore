@@ -1,0 +1,27 @@
+# Local SDKs, runtime data, experiments and external repositories
+/repos/
+/tasks/
+/local/
+
+# .NET build and test output
+**/bin/
+**/obj/
+**/TestResults/
+
+# IDE user state
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Python test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Local credentials and environment overrides
+api-token.txt
+.env
+.env.*
+!.env.example

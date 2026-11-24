@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../../src/PadHotkey.Core/PadHotkey.Core.csproj" /></ItemGroup>
+  <ItemGroup><None Include="../../config/vibe.json" Link="examples/vibe.json" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+</Project>
