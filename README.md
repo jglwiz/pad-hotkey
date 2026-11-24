@@ -156,11 +156,13 @@ Detailed documents are currently in Chinese:
 - [Usage and API](doc/user/usage.md)
 - [Design](doc/dev/design.md)
 - [Verification history](doc/dev/verification.md)
-- [Portable deployment record](doc/user/portable-deployment.md) — development-machine paths and observations, not universal installation defaults.
+- [Portable deployment guide](doc/user/portable-deployment.md)
 - [Optional Codex skill](skill/pad-hotkey/SKILL.md) — adapt the executable path to your installation before installing it. The skill is separate from the application.
 
 For bug reports, include the app version, Windows version, controller model, backend, and reproduction steps. Redact API tokens and personal configuration.
 
 ## License
 
-A project license has not yet been selected. This repository is being prepared for an open-source release; no open-source license grant is currently provided. HIDMaestro and other dependencies retain their own licenses. Choose a project license and review third-party redistribution notices before publishing binaries.
+Licensed under the [MIT License](LICENSE). HIDMaestro and other dependencies retain their own licenses; preserve their applicable redistribution notices when distributing binaries.
+
+Personal deployment records and local troubleshooting notes belong in the Git-ignored `private/` folder. Public documentation must not depend on files in that folder.

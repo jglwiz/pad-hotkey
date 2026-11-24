@@ -154,11 +154,13 @@ v0.1.2 已记录通过 20 项引擎检查、17 项 API 检查、9 项生命周�
 - [使用与 API](doc/user/usage.md)
 - [设计说明](doc/dev/design.md)
 - [验证历史](doc/dev/verification.md)
-- [便携部署记录](doc/user/portable-deployment.md)：包含开发机路径和实测状态，不是所有机器的安装默认值。
+- [便携部署指南](doc/user/portable-deployment.md)
 - [可选 Codex skill](skill/pad-hotkey/SKILL.md)：安装前按实际位置调整 EXE 路径；skill 与程序分开部署。
 
 反馈问题时请提供程序版本、Windows 版本、手柄型号、backend 和复现步骤。请移除 API 令牌及个人配置数据。
 
 ## 许可证
 
-项目尚未选择许可证，目前正在准备开源发布，尚未授予开源许可。HIDMaestro 等依赖保留各自许可证。公开发布二进制前，需要确定项目许可证并检查第三方再分发声明。
+本项目采用 [MIT 许可证](LICENSE)。HIDMaestro 等依赖保留各自许可证；分发二进制时需保留适用的第三方再分发声明。
+
+个人部署记录和本机排障笔记放入被 Git 忽略的 private/ 目录，公开文档不得依赖该目录中的文件。

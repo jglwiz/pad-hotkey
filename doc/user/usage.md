@@ -4,11 +4,11 @@
 
 ## 构建和启动
 
-本机已部署到 `D:\app\PadHotkey`，双击 EXE 或使用以下命令：
+将便携版放到自行选择的目录，双击 EXE 或在该目录使用以下命令：
 
 ```powershell
-& 'D:\app\PadHotkey\PadHotkey.exe' start
-& 'D:\app\PadHotkey\PadHotkey.exe' status
+.\PadHotkey.exe start
+.\PadHotkey.exe status
 ```
 
 开发时在项目根执行：
@@ -21,7 +21,7 @@
 
 启动直接启用已有 JSON 映射，缺少配置则创建空映射；检查 status 中的 backend、connected、index、paused、fault。诊断时可用 `PadHotkey.exe start --paused true` 启动为暂停。通过 `start.ps1 -DryRun` 试配置时不会发送真实按键。`start.ps1 -Seconds 60` 会在一分钟后自动退出。项目脚本优先使用 local/portable，找不到时使用 local/publish；以下 CLI 示例也可改用部署目录中的 EXE。
 
-运行配置与令牌默认保存在 `%LOCALAPPDATA%\PadHotkey`。CLI 自动读取令牌。构建需把官方发行包的 `HIDMaestro.Core.dll` 放到 `local/sdk/`，或传 MSBuild 属性 `HidMaestroSdkPath`。本机已配置；换机器需要另行准备 SDK 与驱动。
+运行配置与令牌默认保存在 `%LOCALAPPDATA%\PadHotkey`。CLI 自动读取令牌。构建需把官方发行包的 `HIDMaestro.Core.dll` 及配套依赖放到 `local/sdk/`，或传 MSBuild 属性 `HidMaestroSdkPath`；实际发键还需准备驱动。
 
 ```powershell
 .\padhotkey.ps1 bind --button B --hold RightAlt
@@ -34,7 +34,7 @@
 
 `release` 同时暂停和释放；重新启用用 resume。短按 Ctrl+F10 只是发送一次快捷键，工具不读取豆包录音状态。hold RightAlt 跟随按钮按住/松开。键名称区分大小写；可读 `/v1/schema` 查询。
 
-可选 config/vibe.json 示例中 A=Enter、X=Tab、Y=左 Ctrl+Z；B 全局按住右 Alt。示例的其他键只在 T3 Code / T3 Code (Beta) 前台启用。根据旧 AntiMicroX 第二根摇杆的四方向配置迁移到右摇杆：原始 `RS.Right` 90% 为上一聊天、`RS.Left` 90% 为下一聊天；`RS.Up` 60% 提高 effort、`RS.Down` 60% 降低 effort；LT/RT 切聊天。原配置把第二根摇杆原始向右注释为竖握向上，原始向左注释为竖握向下。本轮没有实推手柄核验方向，如不一致，读取 inputs 后交换绑定的 input。聊天释放阈值为 70%，effort 为 40%。
+可选 config/vibe.json 是 T3/语音输入演示配置，只有主动导入才生效。根据实际握持方向检查 inputs，再调整摇杆方向与阈值；示例不代表目标应用效果已验证。
 
 ## JSON 配置
 

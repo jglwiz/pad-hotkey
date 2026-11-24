@@ -5,7 +5,7 @@ description: 通过本机 PadHotkey EXE 和 REST API 查询手柄状态、配置
 
 # PadHotkey
 
-程序位于 `D:\app\PadHotkey\PadHotkey.exe`。用户配置与 API 令牌位于 `%LOCALAPPDATA%\PadHotkey`；不要打印或复制令牌。程序与 skill 分开部署，不在 skill 中存放 EXE 或用户映射。
+先通过 `Get-Command PadHotkey.exe` 或用户提供的安装位置定位程序，将实际路径赋给 PowerShell 变量 `$padHotkeyExe`；找不到时询问安装位置，不假定固定盘符。用户配置与 API 令牌默认位于 `%LOCALAPPDATA%\PadHotkey`；不要打印或复制令牌。程序与 skill 分开部署，不在 skill 中存放 EXE 或用户映射。
 
 先运行 `PadHotkey.exe status` 检查 backend、connected、index、paused、fault。连接失败时先检查程序是否运行，不把连接失败当作需要重装驱动。用户要求启动时使用 `PadHotkey.exe start`，该入口请求管理员权限并隐藏后台窗口；随后轮询 status 确认已就绪。启动直接启用保存的映射；无配置时为空映射，不自行导入个人配置。
 
@@ -14,11 +14,11 @@ description: 通过本机 PadHotkey EXE 和 REST API 查询手柄状态、配置
 先 `profile` 读取，修改用户指定部分，再回读确认。简单单键修改使用 CLI：
 
 ```powershell
-& 'D:\app\PadHotkey\PadHotkey.exe' bind --button B --hold RightAlt
-& 'D:\app\PadHotkey\PadHotkey.exe' bind --button B --tap LeftCtrl+F10
-& 'D:\app\PadHotkey\PadHotkey.exe' pause
-& 'D:\app\PadHotkey\PadHotkey.exe' resume
-& 'D:\app\PadHotkey\PadHotkey.exe' stop
+& $padHotkeyExe bind --button B --hold RightAlt
+& $padHotkeyExe bind --button B --tap LeftCtrl+F10
+& $padHotkeyExe pause
+& $padHotkeyExe resume
+& $padHotkeyExe stop
 ```
 
 以上仅是调用示例，不是默认映射。完整 JSON 用 `apply --file <路径>` 显式导入。不要直接编辑运行中的 profile.json 并假定热加载。
